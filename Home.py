@@ -6,12 +6,13 @@ app = Flask(__name__)
 @app.route('/',methods =['GET','POST'])
 def home():
     return render_template('home.html')
+@app.route('/form',methods =['POST','GET'])
+def form():
+    flavour = request.form.get('FLAVOURS')
+    size = request.form.get('SCOPS')
+    
 
-@app.route('/options',methods =['GET','POST'])
+    return render_template('page2.html',size=size,flavour=flavour)
 
-def options():
-    value = request.form.get('FLAVOURS')
-    print(value)
-    return render_template('page2.html')
 
 app.run(debug=True)

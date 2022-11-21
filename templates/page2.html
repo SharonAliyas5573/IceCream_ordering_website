@@ -1,46 +1,64 @@
 <!DOCTYPE html>
 <title>PLACE ODER</title>
 <head>
+    <script type="text/javascript">
+        function chkcontrol(j) {
+        var total=0;
+        for(var i=0; i < document.form1.ckb.length; i++){
+        if(document.form1.ckb[i].checked){
+        total =total +1;}
+        if(total > 4){
+        alert("Please Select only four") 
+        document.form1.ckb[j].checked = false ;
+        return false;
+        }
+        }
+        } </script>
     <link rel="stylesheet" href="{{ url_for('static',filename= 'css/styles2.css')}}">
 </head>
 <body bgcolor="#DFA5CE">
     
     
     <div>
-        
+        {% if size %}
+        <p>{{ size }}</p>
+    {% endif %}
+    {% if flavour %}
+        <p>{{ flavour }}</p>
+    {% endif %}
         <h3>CHOOSE YOUR FLAVOUR:</h3>
-        <form method-"POST" action="/options" autocomplete="off">
+        <form name="form1" method-"POST" action="" autocomplete="off">
             
                 <select id="FLAVOURS" name="FLAVOURS">
                     <option disabled selected value >SELECT FLAVOURS</option>
-                <option value="STRAWBERRY">STRAWBERRY</option>
-                <option value="VANILLA">VANILLA</option>
-                <option value="CHOCOLATE">CHOCOLATE</option>
+                <option value="SB">STRAWBERRY</option>
+                <option value="VN">VANILLA</option>
+                <option value="CL">CHOCOLATE</option>
                 </select>
 
                 <p>&nbsp;</p>
               <h3>CHOOSE SIZE:</h3>
                 <select  id="SCOPS" name="SCOPS">
                     <option disabled selected value >CHOOSE SIZE</option>
-                <option value="1">SMALL (1 SCOPS)</option>
-                <option value="2">MEDIUM (2 SCOPS)</option>
-                <option value="3">LARGE  (3 SCOPS)</option>
+                <option value=1>SMALL (1 SCOPS)</option>
+                <option value=2>MEDIUM (2 SCOPS)</option>
+                <option value=3>LARGE  (3 SCOPS)</option>
                 </select>
 
                 <p>&nbsp;</p>
                 <h3>CHOOSE TOPPING (ONLY 4):</h3>
                 SUGAR CRYSTALS
-                <input type="checkbox" class="checkbox-round" >
+                <input name="ckb" type="checkbox"value=1 onclick='chkcontrol(1)'class="checkbox-round" >
                 M&M's 
-                <input type="checkbox" class="checkbox-round" >
+                <input name="ckb" type="checkbox" value=2 onclick='chkcontrol(2)'class="checkbox-round" >
                 OREO
-                <input type="checkbox" class="checkbox-round" >
+                <input name="ckb" type="checkbox" value=3 onclick='chkcontrol(3)'class="checkbox-round" >
                 BROWNIES
-                <input type="checkbox" class="checkbox-round" >
+                <input name="ckb" type="checkbox" value=4 onclick='chkcontrol(4)' class="checkbox-round" >
                 CHOCOLATE SYRUP
-                <input type="checkbox" class="checkbox-round" >
+                <input name="ckb" type="checkbox"value=5 onclick='chkcontrol(5)'class="checkbox-round" >
                 CHOCOLATE CHIPS
-                <input type="checkbox" class="checkbox-round" >
+                <input name="ckb" type="checkbox"value=6 onclick='chkcontrol(6)'class="checkbox-round" >
                 <p>&nbsp;</p>
 
                 <button class="button" type="submit" value="submit">PLACE ODER !</button>
