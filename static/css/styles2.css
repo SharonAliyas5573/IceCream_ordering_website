@@ -14,8 +14,7 @@ select {
     text-align: left;
   }
 body {
-    background-image: url('bg_2.gif');
-    width:auto;
+    background-image: url('/static/img/bg_2.gif');
     background-size: cover;
 }
 

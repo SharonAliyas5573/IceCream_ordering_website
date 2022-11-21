@@ -1,6 +1,6 @@
 
 body {
-    background-image: url('bg_3.jpeg');
+    background-image: url('/static/img/bg_3.jpeg');
     width:auto;
     background-size: cover;
 }
