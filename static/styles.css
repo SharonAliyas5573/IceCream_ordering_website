@@ -1,0 +1,30 @@
+.div1 .button {
+    background-color:#DFA5CE;
+    color: white;
+    padding: 10px 24px;
+    text-align:center;
+    display:inline;
+    font-size: 16px;
+    border-radius: 12px; 
+    cursor: pointer;
+    margin:-35%;
+    transform: translate(150%, -500%);
+    position:relative;
+   
+  }
+.div1 {
+    border:#DFA5CE;
+    
+    text-align:center;
+  }
+
+.div1 .home_bg{
+    width: 100%;
+    
+    height:100%;
+   
+}
+.button:hover {
+  background-color:#cbcbcb;
+  transition: 0.7s;
+}
