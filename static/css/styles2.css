@@ -13,10 +13,17 @@ select {
     background-color: #149ADB;
     text-align: left;
   }
+select:hover{
+  border-color: #149ADB;
+  border-radius:16px;
+  transition:0.1s;
+  background-color: #85beda;
+}
 body {
     background-image: url('/static/img/bg_2.gif');
     background-size: cover;
 }
+
 
 .checkbox-round {
   width: 1.3em;
@@ -25,7 +32,7 @@ body {
   background-color: white;
   border-radius: 50%;
  
-  border: 1px solid #ddd;
+  border: 1px solid rgb(199, 28, 28);
   appearance: inherit;
   -webkit-appearance: none;
   outline: none;
@@ -35,6 +42,11 @@ body {
 .checkbox-round:checked {
   background-color: #149ADB;
 }
+.checkbox-round:hover {
+  background-color:#DFA5CE;
+  transition:0.2s;
+}
+
 
 
  .button{
@@ -48,5 +60,5 @@ body {
 } 
 .button:hover {
   background-color:#cbcbcb;
-  transition: 0.7s;
+  transition: 0.1s;
 }
