@@ -3,9 +3,27 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="{{ url_for('static',filename= 'css/styles3.css') }}">
 </head>
-<body>
-    <h3>BILL: <br>
-      FLAVOUR: {{f}}<br>SIZE:&nbsp;{{s}}<br>TOPPINGS :&nbsp;{{Topping}}<br>TOTAL:&nbsp;{{BILL}}
+<body >
+  
+    <div class="header">
+    <h2><u>Order Summary</u></h2>
+     </div>
+     <div alling="left" class="card">
+        <h5>Flavour: {{f}}</h5>
+        <h5>Size: {{s}}</h5>
 
-       <h3>THANK YOU ,HAVE A NICE DAY &#128525;</h3>
-</body>
+        <h5>Toppings: &nbsp;{{t}}</h5>
+        <h5>TOTAL AMOUNT : &#8377;&nbsp;{{BILL}}</h5>
+        
+        <h3>THANK YOU ,HAVE A NICE DAY &#128525;</h3>
+        <div ><a  href="{{ url_for('order') }}">
+            <button id="order" class="button" >ANOTHER ORDER </button> 
+         </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         <a  href="{{ url_for('home') }}">
+            <button id="order" class="button" >HOME</button> 
+         </a> </div>
+
+  
+        
+    </div>
+    </body>
