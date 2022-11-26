@@ -1,9 +1,16 @@
-div {
+@import url('https://fonts.googleapis.com/css2?family=Kalam&display=swap');
+.div {
     border:#DFA5CE;
     width:50%;
     text-align:left;
   }
-
+  div.card {
+    width: 250px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: left;
+    border-radius: 16px;
+    background-color: #149ADB;
+  }
 select {
     width:fit-content;
     padding: 10px 24px;
@@ -22,30 +29,39 @@ select:hover{
 body {
     background-image: url('/static/img/bg_2.gif');
     background-size: cover;
+    font-family : 'Kalam', cursive;
+    color:black
+    
+}
+input[class="checkbox"] {
+  display:inline-table;
+  
 }
 
 
-.checkbox-round {
+
+.checkbox {
   width: 1.3em;
   height: 1.3em;
   display: block;
   background-color: white;
   border-radius: 50%;
  
-  border: 1px solid rgb(199, 28, 28);
+  border: 1px solid rgb(15, 55, 230);
   appearance: inherit;
   -webkit-appearance: none;
   outline: none;
   cursor: pointer;
 }
 
-.checkbox-round:checked {
-  background-color: #149ADB;
+.checkbox:checked {
+  background-color: #13f09c;
 }
-.checkbox-round:hover {
+
+.checkbox:hover {
   background-color:#DFA5CE;
   transition:0.2s;
-}
+} 
 
 
 
