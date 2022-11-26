@@ -68,4 +68,4 @@ def form():
     return render_template('page3.html',BILL=BILL,f=f,s=s,t=temp)
 
 
-app.run(debug=True)
+app.run(host='0.0.0.0', port=33)
