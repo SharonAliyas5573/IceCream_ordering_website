@@ -5,14 +5,16 @@
 
 
 </head>
-<body bgcolor="#DFA5CE"> 
-    <div class="div1" >
-     <img  src="{{url_for('static', filename='img/home_bg.gif')}}" class="home_bg">
-   
-     <a  href="{{ url_for('order') }}">
-        <button id="order" class="button" >ORDER NOW !</button> 
-     </a>
-    
-  
+<body ><div class="div1">
+    <input class="c-checkbox" type="checkbox" id="checkbox">
+    <div class="c-formContainer">
+      <form class="c-form" action="pin" method="POST">
+        <input class="c-form__input" name="pin" placeholder="PINCODE" type="text" maxlength="6" pattern="[0-9]{6}" autocomplete="off">
+        <label class="c-form__buttonLabel" for="checkbox">
+          <button class="c-form__button" value="submit" type="submit">Submit</button>
+        </label>
+        <label class="c-form__toggle" for="checkbox" data-title="ODER NOW !"></label>
+      </form>
     </div>
+ </div>
 </body>

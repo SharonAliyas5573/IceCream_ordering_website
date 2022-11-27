@@ -1,19 +1,38 @@
-from flask import Flask ,url_for,render_template,redirect,request
+from flask import Flask ,url_for,render_template,redirect,request,session,flash
+import requests
 
 
 
 app = Flask(__name__)
-
+app.config['SECRET_KEY'] ='mbnbvjbhvgvgvgv'
 @app.route('/',methods=['POST','GET'])
 def root():
-    return redirect('/home')
+    return redirect('/home',)
 
-@app.route('/home')
+@app.route('/home',methods=['GET','POST'])
 def home():
-    return render_template('home.html')
-@app.route('/order',methods =['GET','POST'])
-def order():
-    return render_template('page2.html')
+    error= session.get('error',None)
+    return render_template('home.html',error=error)
+@app.route('/pin',methods=['GET','POST'])
+def pin():
+    pin=request.form.get('pin')
+    if pin is None:
+        pin=0
+        return pin
+    if pin is 0:
+        return redirect(url_for('home'))
+       
+    else:
+        res =requests.get(f'https://api.postalpincode.in/pincode/{pin}').json()
+        sts= res[0]['Status']
+        if sts=='Success':
+            loc = res[0]['PostOffice'][0]['Name']
+        else:
+             session['error']='Invalid Pin-Code'
+             return redirect(url_for('home'))
+
+    return render_template('page2.html',loc=loc)
+    
 
 @app.route('/form',methods =['POST','GET'])
 def form():
@@ -68,4 +87,4 @@ def form():
     return render_template('page3.html',BILL=BILL,f=f,s=s,t=temp)
 
 
-app.run(host='0.0.0.0', port=33)
+app.run(debug=True)

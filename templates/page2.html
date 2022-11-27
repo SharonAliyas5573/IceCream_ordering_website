@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <title>PLACE ODER</title>
 <head>
-    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static',filename= 'css/styles2.css')}}">
 </head>
 <body bgcolor="#DFA5CE"  >
     
     
     <div >
-       
+          <div class="ic" >
+            <i class="material-icons" style="font-size:36px">pin_drop</i>
+            <font size=6>
+                  {{loc}}
+            </font>
+        </div>
        
         <form name="form1" method="POST" action="form" autocomplete="off">
             <h3>CHOOSE YOUR FLAVOUR:</h3>
@@ -53,7 +58,7 @@
                 </div>
                 <div>
                 <input name="ckb" type="checkbox"value='6'class="checkbox" >
-                <label>CHOCOLATE CHIPS (30)</label>
+                <label>CHOCOLATE CHIPS(30)</label>
                 </div>
                </div>
                 
@@ -68,6 +73,9 @@
                 <button class="button" type="submit" value="submit">PLACE ODER !</button>
                
         </form>
+
+
+        
     </div>
     <script src="https://code.jquery.com/jquery-latest.min.js"></script>
     <script>
