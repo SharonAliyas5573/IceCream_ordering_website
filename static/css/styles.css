@@ -1,9 +1,21 @@
+
+html{ 
+  height: 100%;
+}
 body {
     font-size: 9px; 
-   
+    display: inline-block;
+    background-repeat: no-repeat;
+    
+    background: linear-gradient(
+        40deg,
+        rgba(20, 154, 219, 1) 0%,
+        rgba(223, 165, 206, 1) 61%
+      );
+      background-attachment: fixed;
     margin: 0;
     display: grid;
-    height: 100vh;
+    height: 100%;
     place-items: center;
 }
 
@@ -30,10 +42,7 @@ body {
     transform: scale(1);
   }
   
-  /* .c-checkbox:not(:checked)+.c-formContainer .c-form__input:required:valid~.c-form__toggle::before,
-  .c-checkbox:checked+.c-formContainer .c-form__input:required:valid~.c-form__toggle::before {
-    content: "Thank You! 😊";
-  } */
+ 
   
   .c-checkbox:not(:checked)+.c-formContainer .c-form__input:required:valid~.c-form__toggle {
     pointer-events: none;
