@@ -59,22 +59,24 @@
               ""This Is The Best Ice Cream You Can <br />
               You’ll Love It The Way It’s Made.""
             </p>
+            
+              <input class="c-checkbox" type="checkbox" id="checkbox">
+              <div class="c-formContainer" style="margin-left: 50px;">
+                 <form class="c-form" id="form" action="pin" method="POST">
+            <input class="c-form__input" id="pin" name="pin" placeholder="PINCODE" type="text" maxlength="6" pattern="[0-9]{6}"
+            autocomplete="off">
+             <label class="c-form__buttonLabel" for="checkbox">
+            <button class="c-form__button" value="submit" type="submit">Submit</button>
+             </label>
+            <label class="c-form__toggle" for="checkbox" data-title="ODER NOW !"></label>
+                </form>
           </div>
+        </div>
+          
 
           <div class="col-md-6 col-12 pl-5  ">
             <img src="{{ url_for('static',filename= 'img/ice-1.png') }}" alt="ice" />
-          </div><div class="col-md-6 col-12">
-            <input class="c-checkbox" type="checkbox" id="checkbox">
-            <div class="c-formContainer">
-               <form class="c-form" id="form" action="pin" method="POST">
-          <input class="c-form__input" id="pin" name="pin" placeholder="PINCODE" type="text" maxlength="6" pattern="[0-9]{6}"
-          autocomplete="off">
-           <label class="c-form__buttonLabel" for="checkbox">
-          <button class="c-form__button" value="submit" type="submit">Submit</button>
-           </label>
-          <label class="c-form__toggle" for="checkbox" data-title="ODER NOW !"></label>
-              </form>
-        </div>
+          </div>
         </div>
         
       </div>
